@@ -150,9 +150,10 @@ body {
 
 #header {
 	margin: 0 auto;
-	min-height: 80px;
+	min-height: 100px;
 	overflow: hidden;
 	width: 960px;
+	background:url('img/headers/red.gif') no-repeat;
 }
 
 #title-area {

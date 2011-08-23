@@ -15,6 +15,7 @@ class Theme {
 
 	function configure_theme() {
 		$this->theme_information[ 'ThemePath' ] = dirname( __FILE__ );
+		$this->theme_information[ 'ThemeURL' ] = get_bloginfo( 'stylesheet_directory' );
 		$this->genesis_engine = TEMPLATEPATH . '/lib/init.php';
 		$this->configure_theme_support();
 		$this->setup_administration_area();
@@ -22,12 +23,13 @@ class Theme {
 
 	function configure_theme_support() {
 		add_custom_background();
-		add_theme_support( 'genesis-custom-header', array( 'width' => 960, 'height' => 100 ) );
-		add_theme_support( 'genesis-footer-widgets', 1 );
+		add_theme_support( 'genesis-custom-header' , array( 'width' => 960 , 'height' => 100 , 'header_image' => $this->theme_information[ 'ThemeURL' ] . '/img/headers/red.gif' ) );
+		add_theme_support( 'genesis-footer-widgets' , 1 );
 	}
 
 	function setup_administration_area() {
 		add_action( 'admin_menu' , array( &$this, 'add_menu_item' ) );
+		$this->register_defaults();
 	}
 
 	function add_menu_item() {
@@ -42,6 +44,38 @@ class Theme {
 
 	function options_page() {
 		include( $this->theme_information[ 'ThemePath' ] . '/options.php' );
+	}
+
+	function register_defaults() {
+		register_default_headers(
+			array(
+				'red' => array(
+					'url' => $this->theme_information[ 'ThemeURL' ] . '/img/headers/red.gif',
+					'thumbnail_url' => $this->theme_information[ 'ThemeURL' ] . '/img/headers/red.gif',
+					'description' => __( 'Red', 'enthusiast' )
+				),
+				'blue' => array(
+					'url' => $this->theme_information[ 'ThemeURL' ] . '/img/headers/blue.gif',
+					'thumbnail_url' => $this->theme_information[ 'ThemeURL' ] . '/img/headers/blue.gif',
+					'description' => __( 'Blue', 'enthusiast' )
+				),
+				'green' => array(
+					'url' => $this->theme_information[ 'ThemeURL' ] . '/img/headers/green.gif',
+					'thumbnail_url' => $this->theme_information[ 'ThemeURL' ] . '/img/headers/green.gif',
+					'description' => __( 'Green', 'enthusiast' )
+				),
+				'orange' => array(
+					'url' => $this->theme_information[ 'ThemeURL' ] . '/img/headers/orange.gif',
+					'thumbnail_url' => $this->theme_information[ 'ThemeURL' ] . '/img/headers/orange.gif',
+					'description' => __( 'Orange', 'enthusiast' )
+				),
+				'grey' => array(
+					'url' => $this->theme_information[ 'ThemeURL' ] . '/img/headers/grey.gif',
+					'thumbnail_url' => $this->theme_information[ 'ThemeURL' ] . '/img/headers/grey.gif',
+					'description' => __( 'Grey', 'enthusiast' )
+				)
+			)
+		);
 	}
 
 	function start_genesis_framework() {

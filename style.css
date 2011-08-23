@@ -236,7 +236,7 @@ li.sfHover {
 }
 
 li a .sf-sub-indicator {
-	background: url(images/arrow-down.png) no-repeat;
+	background: url(img/arrow-down.png) no-repeat;
 	height: 10px;
 	position: absolute;
 	right: 10px;
@@ -246,7 +246,7 @@ li a .sf-sub-indicator {
 }
 
 li li a .sf-sub-indicator {
-	background: url(images/arrow-right.png) no-repeat;
+	background: url(img/arrow-right.png) no-repeat;
 	top: 10px;
 }
 
@@ -460,13 +460,13 @@ li li a .sf-sub-indicator {
 }
 
 #nav li.rss a {
-	background: url(images/rss.png) no-repeat center left;
+	background: url(img/rss.png) no-repeat center left;
 	margin: 0 0 0 10px;
 	padding: 7px 0 5px 16px;
 }
 
 #nav li.twitter a {
-	background: url(images/twitter-nav.png) no-repeat center left;
+	background: url(img/twitter-nav.png) no-repeat center left;
 	padding: 7px 0 5px 20px;
 }
 
@@ -918,7 +918,7 @@ h6 {
 
 .post-comments,
 .tags {
-	background: url(images/icon-dot.png) no-repeat left;
+	background: url(img/icon-dot.png) no-repeat left;
 	margin: 0 0 0 3px;
 	padding: 0 0 0 10px;
 }
@@ -1369,7 +1369,7 @@ div.gform_footer input.button:hover,
 }
 
 #footer .gototop a {
-	background: url(images/footer-top.png) no-repeat center left;
+	background: url(img/footer-top.png) no-repeat center left;
 	padding: 2px 0 2px 18px;
 }
 

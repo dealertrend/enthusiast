@@ -6,16 +6,42 @@ class Theme {
 
 	private $genesis_engine = NULL; 
 
+	private $theme_information = array();
+
 	function __construct() {
 		$this->configure_theme();
 		$this->start_genesis_framework();
 	}
 
 	function configure_theme() {
+		$this->theme_information[ 'ThemePath' ] = dirname( __FILE__ );
 		$this->genesis_engine = TEMPLATEPATH . '/lib/init.php';
+		$this->configure_theme_support();
+		$this->setup_administration_area();
+	}
+
+	function configure_theme_support() {
 		add_custom_background();
-		add_theme_support( 'genesis-custom-header', array( 'width' => 960, 'height' => 80 ) );
-		add_theme_support( 'genesis-footer-widgets', 3 );
+		add_theme_support( 'genesis-custom-header', array( 'width' => 960, 'height' => 100 ) );
+		add_theme_support( 'genesis-footer-widgets', 1 );
+	}
+
+	function setup_administration_area() {
+		add_action( 'admin_menu' , array( &$this, 'add_menu_item' ) );
+	}
+
+	function add_menu_item() {
+		add_theme_page(
+			'Enthusiast: Theme Options',
+			'Theme Options',
+			'edit_theme_options',
+			'enthusiast-theme-options',
+			array( &$this , 'options_page' )
+		);
+	}
+
+	function options_page() {
+		include( $this->theme_information[ 'ThemePath' ] . '/options.php' );
 	}
 
 	function start_genesis_framework() {

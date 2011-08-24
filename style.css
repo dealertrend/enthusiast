@@ -154,12 +154,13 @@ body {
 	overflow: hidden;
 	width: 960px;
 	background:url('img/headers/red.gif') no-repeat;
+  text-align:left;
 }
 
 #title-area {
 	float: left;
 	overflow: hidden;
-	padding: 15px 0 0;
+	padding: 25px;
 	width: 400px;
 }
 
@@ -212,7 +213,7 @@ body {
 .header-full-width #title-area,
 .header-full-width #title,
 .header-full-width #title a {
-	width: 960px;
+	width: 910px;
 }
 
 

@@ -10,9 +10,11 @@ class Theme {
 
 	function __construct() {
 		$this->configure_theme();
-		$this->start_genesis_framework();
-		$this->specify_theme_features();
-		$this->build_footer();
+		$i_can_haz_engine = $this->start_genesis_framework();
+		if( $i_can_haz_engine === true ) {
+			$this->specify_theme_features();
+			$this->build_footer();
+		}
 	}
 
 	function configure_theme() {
@@ -77,8 +79,10 @@ class Theme {
 	function start_genesis_framework() {
 		if( file_exists ( $this->genesis_engine ) ) {
 			require_once( $this->genesis_engine );
+			return true;
 		} else {
 			$this->failed_to_start();
+			return false;
 		}
 	}
 

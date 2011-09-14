@@ -3,20 +3,6 @@
 		<br />
 	</div>
 	<h2>Enthusiast: Theme Options</h2>
-	<h3>Home Page</h3>
-	<table class="form-table">
-		<tbody>
-			<tr valign="top">
-				<th scope="row">Display Mode</th>
-				<td>
-					<p>
-						<label for="show-title"><input type="radio" checked="checked" id="display-widgets" name="display-mode" value="0" /> Widget Mode</label>
-						<label for="hide-title"><input type="radio" id="display-normal" name="display-mode" value="1" /> Standard Mode</label>
-					</p>
-				</td>
-			</tr>
-		</tbody>
-	</table>
 	<h3>Credits</h3>
 	<table class="form-table">
 		<tbody>

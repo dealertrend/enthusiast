@@ -592,7 +592,6 @@ li li a .sf-sub-indicator {
 .home-middle-full-width {
 	clear:both;
 	width:960px;
-	margin:10px 0px;
 	float:left;
 }
 
@@ -667,7 +666,7 @@ div.menu-left-container ul a:hover {
 ------------------------------------------------------------ */
 
 #inner {
-	margin: 20px auto;
+	margin: 0px auto;
 	overflow: hidden;
 	width: 960px;
 }

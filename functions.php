@@ -105,7 +105,7 @@ class Theme {
 	}
 
 	function specify_theme_features() {
-		$before_widget = '<div id="%1$s" class="widget %2$s enthusiast-theme">';
+		$before_widget = '<div id="%1$s" class="widget %2$s enthusiast-theme widget-area">';
 		$after_widget = '</div>';
 		$before_title = '<h4 class="widget-title">';
 		$after_title = '</h4>';

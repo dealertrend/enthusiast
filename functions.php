@@ -105,6 +105,7 @@ class Theme {
 	}
 
 	function specify_theme_features() {
+		add_filter( 'widget_text' , 'do_shortcode' );
 		$before_widget = '<div id="%1$s" class="widget %2$s enthusiast-theme widget-area">';
 		$after_widget = '</div>';
 		$before_title = '<h4 class="widget-title">';

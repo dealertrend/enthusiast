@@ -42,7 +42,7 @@
 
 <div id="content-sidebar-wrap">
 	<div class="home-content-area enthusiast-theme">
-		<?php if( ! dynamic_sidebar( 'Home Content Area' ) ): ?>
+		<?php if( ! dynamic_sidebar( 'Home Blog Content Area' ) ): ?>
 			<?php do_action( 'genesis_before_content' ); ?>
 			<div id="content" class="hfeed">
 				<?php
